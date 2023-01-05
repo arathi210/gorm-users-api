@@ -41,7 +41,6 @@ func newUser(w http.ResponseWriter, r *http.Request) {
 		panic("failed to connect database")
 	}
 	defer db.Close()
-
 	vars := mux.Vars(r)
 	name := vars["name"]
 	email := vars["email"]
